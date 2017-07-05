@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Online Voice Chat - R15R14</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div id="background">
+      <div id="topBack"></div>
+      <div id="bottomBack"></div>
+    </div>
+    <div id="pageContent">
+      <div id="chatWindow">
+        <div id="title">
+          <div id="groupIcon"></div>
+          <div id="groupName">R15R14</div>
+        </div>
+        <div id="messageContainer">
+          <ul id="messages">
+          </ul>
+        </div>
+        <audio id="audioPlayer" autoplay></audio>
+        <footer>
+          <form action="">
+            <input id="m" autocomplete="off" placeholder="Type a message" /><button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <div id="separator"></div>
+          <div id="volumeControl">
+            <button id="volume"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+            <div id="volumeSliderContainer">
+              <input id="volumeSlider" class="hidden" type="range" min="0" max="100" orient="vertical" />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="errorMessage" class="hidden">
+      <div id="error">
+        <strong>ERROR. </strong>No Host Found, please refresh page.
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>
